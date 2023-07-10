@@ -30,11 +30,12 @@ li{
 a{
     text-decoration: none;
     font-size: 1.5em;
-    color: cornflowerblue;
+    color: slategray;
+    font-weight: 500;
 }
 
 a:hover{
-    color: black;
+    color: cornflowerblue;
 }
 
 #main-div{
