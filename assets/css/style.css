@@ -25,6 +25,7 @@ h3 {
 
 ul {
     display: flex;
+    flex-direction: column;
     margin-right: 20px;
     list-style-type: none;
 }

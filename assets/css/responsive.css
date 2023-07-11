@@ -1,0 +1,11 @@
+@media (min-width: 500px) {
+    ul{
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 768px) {
+    header{
+        justify-content: space-around;
+    }
+}
