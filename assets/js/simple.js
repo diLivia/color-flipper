@@ -1,3 +1,4 @@
+//array de cores básicas css
 const colors = {
     reds: ['indianred', 'lightcoral', 'salmon', 'darksalmon', 'lightsalmon', 'crimson', 'red', 'firebrick', 'darkred'],
     pinks: ['pink', 'lightpink', 'hotpink', 'deeppink', 'mediumvioletred', 'palevioletred'],
@@ -11,26 +12,53 @@ const colors = {
     greys: ['gainsboro', 'lightGray', 'silver', 'darkGray', 'gray', 'dimGray', 'lightSlateGray', 'slateGray', 'darkSlateGray', 'black'],
 }
 
-const selectEl = document.getElementById('select-el')
-const btn = document.getElementById('btn')
-const color = document.querySelector('.color')
-const mainDiv = document.getElementById('main-div')
-selectEl.onchange = function (){
-    selectedValue = selectEl.options[selectEl.selectedIndex].value
-    return selectedValue
+//botão, select e elementos de exibição de cor
+const selectElement = document.getElementById('select-el')
+const buttonElement = document.getElementById('btn')
+const colorTextElement = document.querySelector('.color')
+const mainDivElement = document.getElementById('main-div')
+
+//vaviaveis de alteração
+let colorGroup = []
+let optionValue = ""
+let randomColor = ""
+let allColors = []
+
+//funções para pegar todas as cores
+function getAllColors() {
+    return Object.values(colors).reduce(function(acc, group) {
+      return acc.concat(group);
+    }, []);
 }
-let selectedValue = selectEl.options[selectEl.selectedIndex].value
-let arr = colors[selectedValue]
 
-//erro na troca de grupos
+function updateAllColors() {
+    allColors = getAllColors()
+}
 
-btn.addEventListener('click', function(){
-    let randomColor = arr[randomNumber()]
-    color.textContent = randomColor
-    mainDiv.style.backgroundColor = randomColor
+//evento do option change
+selectElement.addEventListener('change', function () {
+    optionValue = this.value
+    colorGroup = colors[optionValue]
+    updateAllColors()
 })
 
-function randomNumber(){
-    return Math.floor(Math.random() * arr.length)
-}
+//evento do botão
+buttonElement.addEventListener('click', function () {
+    let randomIndex
 
+    if (optionValue === "all") {
+        randomIndex = randomNumber(allColors.length)
+        randomColor = allColors[randomIndex]
+    } else {
+        randomIndex = randomNumber(colorGroup.length)
+        randomColor = colorGroup[randomIndex]
+    }
+
+    colorTextElement.textContent = randomColor
+    mainDivElement.style.backgroundColor = randomColor
+})
+
+//gerar número aleatório, com parametro para definir um numero maximo
+function randomNumber(max) {
+    return Math.floor(Math.random() * max)
+}
