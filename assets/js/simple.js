@@ -1,9 +1,9 @@
 //array de cores básicas css
 const colors = {
-    reds: ['indianred', 'lightcoral', 'salmon', 'darksalmon', 'lightsalmon', 'crimson', 'red', 'firebrick', 'darkred'],
-    pinks: ['pink', 'lightpink', 'hotpink', 'deeppink', 'mediumvioletred', 'palevioletred'],
-    oranges: ['coral', 'tomato', 'orangered', 'darkorange', 'orange'],
-    yellows: ['gold', 'yellow', 'lightyellow', 'lemonchiffon', 'lightgoldenrodyellow', 'papayawhip', 'moccasin', 'peachpuff', 'palegoldenrod', 'khaki', 'darkkhaki'],
+    reds: ['indianRed', 'lightCoral', 'salmon', 'darkSalmon', 'lightSalmon', 'crimson', 'red', 'fireBrick', 'darkRed'],
+    pinks: ['pink', 'lightPink', 'hotPink', 'deepPink', 'mediumVioletRed', 'paleVioletRed'],
+    oranges: ['coral', 'tomato', 'orangeRed', 'darkOrange', 'orange'],
+    yellows: ['gold', 'yellow', 'lightYellow', 'lemonChiffon', 'lightGoldenrodYellow', 'papayawhip', 'moccasin', 'peachPuff', 'paleGoldenrod', 'khaki', 'darkKhaki'],
     purples: ['lavender', 'thistle', 'plum', 'violet', 'orchid', 'fuchsia', 'magenta', 'mediumOrchid', 'mediumPurple', 'blueViolet', 'darkViolet', 'darkOrchid', 'darkMagenta', 'purple', 'rebeccaPurple', 'indigo', 'mediumSlateBlue', 'slateBlue', 'darkSlateBlue'],
     greens: ['greenYellow', 'chartreuse', 'lawnGreen', 'lime', 'limeGreen', 'paleGreen', 'lightGreen', 'mediumSpringGreen', 'springGreen', 'mediumSeaGreen', 'seaGreen', 'forestGreen', 'green', 'darkGreen', 'yellowGreen', 'oliveDrab', 'olive', 'darkOliveGreen', 'mediumAquamarine', 'darkSeaGreen', 'lightSeaGreen', 'darkCyan', 'teal'],
     "blues-cyans": ['aqua', 'cyan', 'lightCyan', 'paleTurquoise', 'aquamarine', 'turquoise', 'mediumTurquoise', 'darkTurquoise', 'cadetBlue', 'steelBlue', 'lightSteelBlue', 'powerBlue', 'lightBlue', 'skyBlue', 'lightSkyeBlue', 'deepSkyBlue', 'dodgerBlue', 'cornflowerBlue', 'royalBlue', 'blue', 'mediumBlue', 'darkBlue', 'navy', 'midnightBlue'],
